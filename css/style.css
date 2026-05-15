@@ -1,0 +1,42 @@
+/* Main Styles for Daniele E. Schiavazzi Academic Website */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.section-title {
+    @apply text-3xl font-bold text-gray-800 mb-8 border-b-2 border-blue-600 pb-2;
+}
+
+.card {
+    @apply bg-white rounded-lg shadow-lg p-6 mb-6 transition-transform transform hover:scale-105;
+}
+
+.publication-card {
+    @apply bg-white rounded-lg shadow-md p-4 mb-4;
+}
+
+.publication-list {
+    list-style-type: decimal;
+    padding-left: 2.5rem;
+}
+
+.publication-list li {
+    @apply bg-white rounded-lg shadow-md p-4 mb-4;
+}
+
+.accordion-header {
+    @apply flex justify-between items-center cursor-pointer bg-gray-100 p-4 rounded-lg hover:bg-gray-200 transition-colors;
+}
+
+nav a {
+    @apply px-4 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-100 rounded-md transition-colors;
+}
+
+nav a.active {
+    @apply text-blue-600 font-semibold bg-blue-50;
+}
+
+[x-cloak] {
+    display: none !important;
+}

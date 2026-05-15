@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniele E. Schiavazzi - Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-700">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+                <div class="text-center lg:text-left mb-3 lg:mb-0">
+                    <h1 class="text-2xl font-bold text-gray-900">Daniele E. Schiavazzi</h1>
+                    <p class="text-md text-gray-600">Associate Professor, University of Notre Dame</p>
+                </div>
+                <nav class="hidden md:flex items-center justify-center lg:justify-end space-x-4 flex-wrap gap-y-2" id="nav-menu">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#news" class="nav-link">News</a>
+                    <a href="#honors" class="nav-link">Honors & Awards</a>
+                    <a href="#group" class="nav-link">Group</a>
+                    <a href="#publications" class="nav-link">Publications</a>
+                    <a href="#teaching" class="nav-link">Teaching</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+
+        <!-- About Section -->
+        <section id="about" class="mb-16 scroll-mt-24">
+            <div class="flex flex-col md:flex-row items-center bg-white rounded-lg shadow-xl p-8">
+                <div class="md:w-1/4 text-center mb-6 md:mb-0">
+                    <img src="images/des.jpg" alt="Daniele E. Schiavazzi" class="rounded-full mx-auto shadow-md">
+                </div>
+                <div class="md:w-3/4 md:pl-8">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">About Me</h2>
+                    <p class="mb-4">
+                        I am an Associate Professor in the Department of Applied and Computational Mathematics and Statistics at the University of Notre Dame, with a concurrent appointment in the Department of Aerospace and Mechanical Engineering. My research focuses on the development of robust and scalable computational methods for uncertainty quantification, data assimilation, machine learning, and agentic scientific computing.
+                    </p>
+                    <p>
+                        A primary application area of my work is in cardiovascular modeling, where we aim to create patient-specific simulations to improve diagnosis, treatment planning, and medical device design. My lab develops techniques for multi-fidelity surrogate modeling, Bayesian inference, and integrating physics-based models with clinical data from electronic health records and medical imaging.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="mb-16 scroll-mt-24">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">News</h2>
+
+            <div class="space-y-4">
+                <!-- Always visible news items -->
+                <div class="card border-l-4 border-blue-600 pl-6">
+                    <p class="text-sm text-gray-500 mb-1">May 2026</p>
+                    <p>Our paper on <strong>Conditional Normalizing Flows for Forward and Backward Joint State and Parameter Estimation</strong> has been accepted in the Journal of Machine Learning for Modeling and Computing.</p>
+                </div>
+
+                <div class="card border-l-4 border-blue-600 pl-6">
+                    <p class="text-sm text-gray-500 mb-1">March 2026</p>
+                    <p>Our paper on <strong>Enabling stratified sampling in high dimensions via nonlinear dimensionality reduction</strong> has been accepted in the SIAM Journal of Scientific Computing.</p>
+                </div>
+
+                <div class="card border-l-4 border-blue-600 pl-6">
+                    <p class="text-sm text-gray-500 mb-1">February 2026</p>
+                    <p>Our paper on <strong>On the accuracy of implicit neural representations for cardiovascular anatomies and hemodynamic fields</strong> has been published in Computers in Biology and Medicine.</p>
+                </div>
+
+                <div class="card border-l-4 border-blue-600 pl-6">
+                    <p class="text-sm text-gray-500 mb-1">December 2025</p>
+                    <p>Our paper on <strong>On the performance of multi-fidelity and reduced-dimensional neural emulators for inference of physiologic boundary conditions</strong> has been accepted in Computers in Biology and Medicine.</p>
+                </div>
+
+                <div class="card border-l-4 border-blue-600 pl-6">
+                    <p class="text-sm text-gray-500 mb-1">November 2025</p>
+                    <p>Our paper on <strong>NeurAM: nonlinear dimensionality reduction for uncertainty quantification through neural active manifolds</strong> has been published in the Journal of Scientific Computing.</p>
+                </div>
+
+                <!-- Collapsible older news -->
+                <div x-data="{ open: false }">
+                    <div @click="open = !open" class="accordion-header mt-6">
+                        <h3 class="text-xl font-semibold text-gray-700">Older News</h3>
+                        <svg :class="{'rotate-180': open}" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div x-show="open" x-cloak class="mt-4 space-y-4">
+                        <div class="card border-l-4 border-gray-400 pl-6">
+                            <p class="text-sm text-gray-500 mb-1">October 2025</p>
+                            <p>Presented our work on <strong>multifidelity uncertainty quantification</strong> at the SIAM Conference on Mathematics of Data Science in Atlanta, GA.</p>
+                        </div>
+
+                        <div class="card border-l-4 border-gray-400 pl-6">
+                            <p class="text-sm text-gray-500 mb-1">May 2025</p>
+                            <p>Three new papers accepted in the <strong>Philosophical Transactions of the Royal Society A</strong> special issue on cardiovascular modeling and uncertainty quantification.</p>
+                        </div>
+
+                        <div class="card border-l-4 border-gray-400 pl-6">
+                            <p class="text-sm text-gray-500 mb-1">November 2024</p>
+                            <p>New grant awarded from the <strong>Notre Dame BELS Initiative</strong> for developing LLM agents for physiologic inversion. Joint work with Fang Liu and Nitesh Chawla.</p>
+                        </div>
+
+                        <div class="card border-l-4 border-gray-400 pl-6">
+                            <p class="text-sm text-gray-500 mb-1">August 2025</p>
+                            <p>Completed visiting scholar position at <strong>Sandia National Laboratories</strong>, collaborating on advanced UQ methods for computational mechanics.</p>
+                        </div>                        
+
+                        <div class="card border-l-4 border-gray-400 pl-6">
+                            <p class="text-sm text-gray-500 mb-1">January 2024</p>
+                            <p>Started visiting scientist position at <strong>Brown University</strong>, Division of Applied Mathematics.</p>
+                        </div>                        
+
+                        <div class="card border-l-4 border-gray-400 pl-6">
+                            <p class="text-sm text-gray-500 mb-1">September 2023</p>
+                            <p>NIH R01 grant awarded for <strong>uncertainty-aware virtual treatment planning for pulmonary stenosis</strong> in collaboration with Stanford University.</p>
+                        </div>
+
+                        <div class="card border-l-4 border-gray-400 pl-6">
+                            <p class="text-sm text-gray-500 mb-1">June 2023</p>
+                            <p>Paper on <strong>InVAErt networks</strong> accepted in Computer Methods in Applied Mechanics and Engineering.</p>
+                        </div>
+
+                        <div class="card border-l-4 border-gray-400 pl-6">
+                            <p class="text-sm text-gray-500 mb-1">March 2023</p>
+                            <p>Keynote presentation at the <strong>SIAM CSE Conference</strong> in Amsterdam on multifidelity methods for cardiovascular simulations.</p>
+                        </div>
+
+                        <div class="card border-l-4 border-gray-400 pl-6">
+                            <p class="text-sm text-gray-500 mb-1">January 2023</p>
+                            <p>New paper published in <strong>Journal of Computational Physics</strong> on multifidelity data fusion in convolutional encoder/decoder networks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Honors & Awards Section -->
+        <section id="honors" class="mb-16 scroll-mt-24">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Honors & Awards</h2>
+            <ul class="space-y-4 border-l-2 border-blue-200 pl-4">
+                <li><strong>Huisking Foundation, Inc. Assistant Professorship</strong> (2020-2021)</li>
+                <li><strong>NSF CAREER Award</strong> (2020-2025)</li>
+                <li><strong>An Advisor to X</strong> (April-September 2019)</li>
+                <li><strong>DARPA Young Faculty Award</strong> (2018-2020)</li>
+                <li><strong>ICME Poster Award</strong>, ICME Expo 2016, Stanford University — <em>Poster that best exhibits interdisciplinary research connecting mathematics, engineering, applied science, and computation</em> (2016)</li>
+            </ul>
+        </section>
+
+        <!-- Group Section -->
+        <section id="group" class="mb-16 scroll-mt-24">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Group</h2>
+
+            <!-- Current Graduate Students -->
+            <div class="mb-8">
+                <ul class="space-y-4 border-l-2 border-blue-200 pl-4">
+                    <li>
+                        <strong>Cristian Villatoro</strong>
+                        <p class="text-sm text-gray-600"><em>Data-driven multi-fidelity predictors for physics-based systems</em></p>
+                    </li>
+                    <li>
+                        <strong>Bozhi Sun</strong>
+                        <p class="text-sm text-gray-600"><em>Reinforcement learning for online physics-based surgical decisions</em></p>
+                    </li>
+                    <li>
+                        <strong>Sreejata Dey</strong>
+                        <p class="text-sm text-gray-600"><em>Model synthesis for stiff systems of ODEs</em></p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- STRAND Undergraduate Students -->
+            <div class="mb-8">
+                <h3 class="text-xl font-semibold text-gray-600 mb-1">STRAND Undergraduate Students</h3>
+                <p class="text-sm text-gray-600 mb-3"><em>Testing CAR.L.L., an AI agent for cardiovascular health</em></p>
+                <p class="text-gray-700">Gaaya Binoj, Mckenna Douglas, Elizabeth Hanley, Sara Mietus, Bridget Milligan, Marie Schafer</p>
+            </div>
+
+            <!-- Alumni - Expandable -->
+            <div x-data="{ open: false }" class="mt-8">
+                <div @click="open = !open" class="accordion-header">
+                    <h3 class="text-2xl font-semibold text-gray-700">Alumni</h3>
+                    <svg :class="{'rotate-180': open}" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div x-show="open" x-cloak x-transition class="mt-6">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <!-- Graduate Alumni -->
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-600 mb-4">Graduate Alumni</h4>
+                            <ul class="space-y-4 border-l-2 border-blue-200 pl-4">
+                                <li>
+                                    <strong>Guoxiang (Grayson) Tong</strong>
+                                    <p class="text-sm text-gray-600"><em>Machine learning for ensemble physics-based solvers, Deep synthesis for physics-based models</em></p>
+                                    <p class="text-sm text-gray-500 mt-1">Current position: Postdoctoral trainee, Stanford University</p>
+                                </li>
+<!--                                 <li>
+                                    <strong>Jubilee Lee</strong>
+                                    <p class="text-sm text-gray-600"><em>Neural fields for cardiovascular hemodynamics</em></p>
+                                    <p class="text-sm text-gray-500 mt-1">Current position: NA</p>
+                                </li>
+ -->                                <li>
+                                    <strong>Karlyn Harrod</strong> (Jan 2018 - May 2022)
+                                    <p class="text-sm text-gray-600"><em>A non-invasive patient-specific modeling approach for predicting group II pulmonary hypertension as a clinical indicator of diastolic heart failure for patients with uncertain clinical data</em></p>
+                                    <p class="text-sm text-gray-500 mt-1">Current position: Oak Ridge National Laboratory</p>
+                                </li>
+                                <li>
+                                    <strong>Lauren Hensley Partin</strong> (Spring 2018 - May 2022)
+                                    <p class="text-sm text-gray-600"><em>Multi-task and multi-fidelity convolutional encoder-decoder networks</em></p>
+                                    <p class="text-sm text-gray-500 mt-1">Current position: Siemens Healthineers</p>
+                                </li>
+                                <li>
+                                    <strong>Xue Li</strong> (Spring 2017 - Summer 2021)
+                                    <p class="text-sm text-gray-600"><em>Ensemble finite element solvers for cardiovascular modeling under uncertainty</em></p>
+                                    <p class="text-sm text-gray-500 mt-1">Current position: Dalian Maritime University</p>
+                                </li>
+                                <li>
+                                    <strong>Justin Tran</strong> (Fall 2013 - Fall 2018)
+                                    <p class="text-sm text-gray-600"><em>Computational modeling and uncertainty quantification of blood flow in the coronary arteries</em> (co-advised with A. Marsden)</p>
+                                    <p class="text-sm text-gray-500 mt-1">Current position: Cal State Fullerton</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Undergraduate Alumni -->
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-600 mb-4">Undergraduate Alumni</h4>
+                            <ul class="space-y-4 border-l-2 border-blue-200 pl-4">
+                                <li>
+                                    <strong>Luke Lagunowich</strong> (November 2023 - May 2026)
+                                    <p class="text-sm text-gray-600"><em>Conditional normalizing flows for forward and backward joint state and parameter estimation</em></p>
+                                </li>
+
+                                <li>
+                                    <strong>John Lee</strong> (Summer 2021 - Summer 2024)
+                                    <p class="text-sm text-gray-600"><em>Uncertainty aware virtual treatment planning for pulmonary stenosis in congenital heart disease</em></p>
+                                </li>
+                                <li>
+                                    <strong>Hazel Lee</strong> (Summer 2022)
+                                    <p class="text-sm text-gray-600"><em>ODE models for the human cardiovascular system</em></p>
+                                </li>
+                                <li>
+                                    <strong>John Magargee</strong> (Fall 2021)
+                                    <p class="text-sm text-gray-600"><em>Stochastic models for the GameStop trading frenzy: sentiment analysis of reddit posts</em></p>
+                                </li>
+                                <li>
+                                    <strong>Shaoyu Liu</strong> (Fall 2019)
+                                    <p class="text-sm text-gray-600"><em>Neural network predictors for mispricing of financial assets</em></p>
+                                </li>
+                                <li>
+                                    <strong>Yihong Ma</strong> (Fall 2018 - Spring 2019)
+                                    <p class="text-sm text-gray-600"><em>Forecast of economic and financial data combining wavelet denoising and artificial neural networks</em></p>
+                                </li>
+                                <li>
+                                    <strong>Benjamin Shepard</strong> (Fall 2018)
+                                    <p class="text-sm text-gray-600"><em>Introduction to mean field games</em></p>
+                                </li>
+                                <li>
+                                    <strong>Jiamin Ge</strong> (Fall 2018)
+                                    <p class="text-sm text-gray-600"><em>Multiresolution decomposition of time series with applications in economics and finance</em></p>
+                                </li>
+                                <li>
+                                    <strong>Sean Pietrowicz</strong> (Fall 2018 - Spring 2019)
+                                    <p class="text-sm text-gray-600"><em>Solenoidal filtering of three-dimensional velocity fields with finite frames</em></p>
+                                </li>
+                                <li>
+                                    <strong>Joseph Pennacchio</strong> (Summer 2017 - Spring 2018)
+                                    <p class="text-sm text-gray-600"><em>Sparse regression with economic data</em> (co-advised with Prof. Bertanha, Department of Economics)</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="mb-16 scroll-mt-24">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-2">Publications</h2>
+            <div class="space-y-4">
+
+                <!-- Recent Preprints (non-collapsible) -->
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-400 mb-4">Recent Preprints</h3>
+                    <ol class="publication-list" start="1">
+                        <li>Dey S., Tong G.G., MacArt J.F., <strong>Schiavazzi D.E.</strong>, <em>Model synthesis and identifiability analysis of stiff chemical reaction systems with inVAErt networks</em>, Submitted for publication, 2026.</li>
+                        <li>Choi C.H., Marsden A.L., <strong>Schiavazzi D.E.</strong>, <em>FalconBC: Flow matching for Amortized inference of Latent-CONditioned physiologic Boundary Conditions</em>, Submitted for publication, 2026.</li>
+                        <li>Villatoro C.J., Geraci G., <strong>Schiavazzi D.E.</strong>, <em>Assessing the performance of correlation-based multi-fidelity neural emulators</em>, Submitted for publication, 2025.</li>
+                        <li>Sun B., Tierney S., Feinstein J.A., Damen F., Marsden A.L., <strong>Schiavazzi D.E.</strong>, <em>Optimal patient allocation for echocardiographic assessments</em>, Submitted for publication, 2025. [<a href="https://arxiv.org/abs/2506.06297" class="text-blue-600 hover:underline" target="_blank">arXiv</a>] [<a href="https://github.com/desResLab/echo_rl" class="text-blue-600 hover:underline" target="_blank">GitHub</a>]</li>
+                    </ol>
+                </div>
+
+                <!-- Peer-Reviewed Publications -->
+                <div x-data="{ open: false }">
+                    <div @click="open = !open" class="accordion-header">
+                        <h3 class="text-lg font-semibold text-gray-400">Peer-Reviewed Publications</h3>
+                        <svg :class="{'rotate-180': open}" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <ol x-show="open" x-cloak class="publication-list mt-4" start="5">
+                        <li>Lagunowich L.S., Tong G., <strong>Schiavazzi D.E.</strong>, <em>Conditional Normalizing Flows for Forward and Backward Joint State and Parameter Estimation</em>, Accepted, Journal of Machine Learning for Modeling and Computing, 2026.</li>
+                        <li>Lee J., <strong>Schiavazzi D.E.</strong>, <em>On the accuracy of implicit neural representations for cardiovascular anatomies and hemodynamic fields</em>, Computers in Biology and Medicine, 205, 2026.</li>
+                        <li>Geraci G., <strong>Schiavazzi D.E.</strong>, Zanoni A., <em>Enabling stratified sampling in high dimensions via nonlinear dimensionality reduction</em>, Accepted, SIAM Journal of Scientific Computing, 2026.</li>
+                        <li>Choi C., Zanoni A., <strong>Schiavazzi D.E.</strong>, Marsden A.L., <em>On the performance of multi-fidelity and reduced-dimensional neural emulators for inference of physiologic boundary conditions</em>, Accepted, Computers in Biology and Medicine, 2025.</li>
+                        <li>Zanoni A., Geraci G., Salvador M., Marsden A.L., <strong>Schiavazzi D.E.</strong>, <em>NeurAM: nonlinear dimensionality reduction for uncertainty quantification through neural active manifolds</em>, Journal of Scientific Computing, 105(79), 2025.</li>
+                        <li>Menon K., Zanoni A., Khan O., Geraci G., Nieman K., <strong>Schiavazzi D.E.</strong>, Marsden A.L., <em>Uncertainty-aware coronary hemodynamics personalized by CT perfusion imaging: From Bayesian estimation to improved multi-fidelity uncertainty quantification</em>, Computer Methods and Programs in Biomedicine, 271, 2025.</li>
+                        <li>Tong G.G., Sing Long C.A., <strong>Schiavazzi D.E.</strong>, <em>InVAErt networks for amortized inference and identifiability analysis of lumped parameter hemodynamic models</em>, Philosophical Transactions of the Royal Society A, 383(2293), 2025.</li>
+                        <li>De Florio M., Zou Z., <strong>Schiavazzi D.E.</strong>, Karniadakis G.E., <em>Quantification of total uncertainty in the physics-informed reconstruction of CVSim-6 physiology</em>, Philosophical Transactions of the Royal Society A, 383(2292), 2024.</li>
+                        <li>Richter J., Nitzler J., Pegolotti L., Menon K., Biehler J., Wall W.A., <strong>Schiavazzi D.E.</strong>, Marsden A.L., Pfaller M.R., <em>Bayesian Windkessel calibration using optimized 0D surrogate models</em>, Philosophical Transactions of the Royal Society A, 383(2292), 2024.</li>
+                        <li>Zanoni A., Geraci G., Salvador M., Menon K., Marsden A.L., <strong>Schiavazzi D.E.</strong>, <em>Improved multifidelity Monte Carlo estimators based on normalizing flows and dimensionality reduction techniques</em>, Computer Methods in Applied Mechanics and Engineering, 429(1):117119, 2024.</li>
+                        <li>Schäfer F., <strong>Schiavazzi D.E.</strong>, Hellevik L.R., Sturdy J., <em>Global sensitivity analysis with multifidelity Monte Carlo and polynomial chaos expansion for vascular haemodynamics</em>, International Journal of Numerical Methods in Biomedical Engineering, 40(8):e3836, 2024.</li>
+                        <li>Lee J.D., Richter J., Pfaller M.R., Szafron J.M., Menon K., Zanoni A., Ma M.R., Feinstein J.A., Kreutzer J., Marsden A.L., <strong>Schiavazzi D.E.</strong>, <em>A probabilistic neural twin for treatment planning in peripheral pulmonary artery stenosis</em>, International Journal of Numerical Methods in Biomedical Engineering, 40(5):e3820, 2024.</li>
+                        <li>Tong G.G., Sing Long C.A., <strong>Schiavazzi D.E.</strong>, <em>InVAErt networks: a data-driven framework for emulation, inference and identifiability analysis</em>, Computer Methods in Applied Mechanics and Engineering, 423:116846, 2024.</li>
+                        <li>Wang Y., Cobian E.R., Lee J., Liu F., Hauenstein J.D., <strong>Schiavazzi D.E.</strong>, <em>LINFA: a Python library for variational inference with normalizing flow and annealing</em>, Journal of Open Source Software, 2024.</li>
+                        <li>Zanoni A., Geraci G., Salvador M., Menon K., Marsden A.L., <strong>Schiavazzi D.E.</strong>, <em>Linear and nonlinear dimension reduction strategies for multifidelity uncertainty propagation of nonparametric distributions</em>, AIAA SCITECH 2024 Forum, 2024.</li>
+                        <li>Villatoro C., Geraci G., <strong>Schiavazzi D.E.</strong>, <em>On Coordinate Encoding in Multifidelity Neural Networks</em>, AIAA SCITECH 2024 Forum, 2024.</li>
+                        <li>Villatoro C.J., Geraci G., <strong>Schiavazzi D.E.</strong>, <em>On Coordinate Encoding in Multi-Fidelity Neural Emulators</em>, in Computer Science Research Institute Summer Proceedings 2023, Technical Report SAND2023-13916R, Sandia National Laboratories, pp. 422–432, 2023.</li>
+                        <li>Partin L., <strong>Schiavazzi D.E.</strong>, Sing Long C.A., <em>An analysis of reconstruction noise from undersampled 4D flow MRI</em>, Biomedical Signal Processing and Control, 84:104800, 2023.</li>
+                        <li>Cobian E.R., Hauenstein J.D., Liu F., <strong>Schiavazzi D.E.</strong>, <em>AdaAnn: Adaptive Annealing Scheduler for Probability Density Approximation</em>, International Journal of Uncertainty Quantification, 13(3):39-68, 2023.</li>
+                        <li>Tong G.G., <strong>Schiavazzi D.E.</strong>, <em>Data-driven synchronization-avoiding algorithms in the explicit distributed structural analysis of soft tissue</em>, Computational Mechanics, 71(3):453-479, 2023.</li>
+                        <li>Partin L., Geraci G., Rushdi A.A., Eldred M.S., <strong>Schiavazzi D.E.</strong>, <em>Multifidelity data fusion in convolutional encoder/decoder networks</em>, Journal of Computational Physics, 472:111666, 2023.</li>
+                        <li>Wang Y., Liu F., <strong>Schiavazzi D.E.</strong>, <em>Variational Inference with NoFAS: Normalizing Flow with Adaptive Surrogate for Computationally Expensive Models</em>, Journal of Computational Physics, 467:111454, 2022.</li>
+                        <li>Li X., <strong>Schiavazzi D.E.</strong>, <em>An ensemble solver for segregated cardiovascular FSI</em>, Computational Mechanics, 68, 1421-1436, 2021.</li>
+                        <li>Maher G.D., Fleeter C.M., <strong>Schiavazzi D.E.</strong>, Marsden A.L., <em>Geometric Uncertainty in Patient-Specific Cardiovascular Modeling with Convolutional Dropout Networks</em>, Computer Methods in Applied Mechanics and Engineering, 386, 114038, 2021.</li>
+                        <li>Harrod K.K., Rogers J.L., Feinstein J.A., Marsden A.L., <strong>Schiavazzi D.E.</strong>, <em>Predictive modeling of secondary pulmonary hypertension in left ventricular diastolic dysfunction</em>, Frontiers in Computational Physiology, 12, 654, 2021.</li>
+                        <li>Seo J., Fleeter C.M., Kahn A.M., Marsden A.L., <strong>Schiavazzi D.E.</strong>, <em>Multi-fidelity estimators for coronary circulation models under clinically-informed data uncertainty</em>, International Journal for Uncertainty Quantification, 10(5):449-466, 2020.</li>
+                        <li>Seo J., <strong>Schiavazzi D.E.</strong>, Kahn A.M., Marsden A.L., <em>The effects of clinically-derived parametric data uncertainty in patient-specific coronary simulations with deformable walls</em>, International Journal For Numerical Methods In Biomedical Engineering, 36(8), 2020.</li>
+                        <li>Fleeter C.M., Geraci G., <strong>Schiavazzi D.E.</strong>, Kahn A.M., Marsden A.L., <em>Multilevel and multifidelity uncertainty quantification for cardiovascular hemodynamics</em>, Computer Methods in Applied Mechanics and Engineering, 365, 2020.</li>
+                        <li>Khosravi R., Bangalore Ramachandra A., Szafron J.M., <strong>Schiavazzi D.E.</strong>, Breuer C.K., Humphrey J.D., <em>A computational Bio-Chemo-Mechanical model of in-vivo tissue engineered vascular graft development</em>, Integrative Biology, 12(3):47-63, 2020.</li>
+                        <li>Akintunde A.R., Miller K.S., <strong>Schiavazzi D.E.</strong>, <em>Bayesian inference of constitutive model parameters from uncertain uniaxial experiments on murine tendons</em>, Journal of the Mechanical Behavior of Biomedical Materials, 96:285-300, 2019.</li>
+                        <li>Seo J., <strong>Schiavazzi D.E.</strong>, Marsden A.L., <em>Performance of preconditioned iterative linear solvers for cardiovascular simulations in rigid and deformable vessels</em>, Computational Mechanics, 64(3):717-739, 2019.</li>
+                        <li>Tran J.S., <strong>Schiavazzi D.E.</strong>, Kahn A.M., Marsden A.L., <em>Uncertainty quantification of simulated biomechanical stimuli in coronary artery bypass grafts</em>, Computer Methods in Applied Mechanics and Engineering, 345:402-428, 2019.</li>
+                        <li>Amili O., <strong>Schiavazzi D.E.</strong>, Moen S., Jagadeesan B., Van de Moortele P.F., Coletti F., <em>Hemodynamics in a giant intracranial aneurysm characterized by in vitro 4D flow MRI</em>, PLOS One, 13(1), 2018.</li>
+                        <li><strong>Schiavazzi D.E.</strong>, Nemes A., Schmitter S., Coletti F., <em>The Effect of Velocity Filtering in Pressure Estimation</em>, Experiments in Fluids, 58(5):50, 2017.</li>
+                        <li><strong>Schiavazzi D.E.</strong>, Doostan A., Iaccarino G., Marsden A.L., <em>A generalized multi-resolution expansion for uncertainty propagation with application to cardiovascular modeling</em>, Computer Methods in Applied Mechanics and Engineering, 314:196-221, 2017.</li>
+                        <li>Ward E., <strong>Schiavazzi D.E.</strong>, Sood D., Marsden A., Lane J., Owens E., Barleben A., <em>CT FFR Can Identify Culprit Lesions in Aorto-iliac Occlusive Disease Using Minimally-Invasive Techniques</em>, Annals of Vascular Surgery, 38:151-157, 2017.</li>
+                        <li>Tran J., <strong>Schiavazzi D.E.</strong>, Ramachandra B.A., Kahn A., Marsden A.L., <em>Automated tuning for parameter identification in multi-scale coronary simulations</em>, Computers & Fluids, 142(5):128-138, 2017.</li>
+                        <li><strong>Schiavazzi D.E.</strong>, Baretta A., Pennati G., Hsia T.Y., Marsden A.L., <em>Patient-specific parameter estimation in single-ventricle lumped circulation models under uncertainty</em>, International Journal of Numerical Methods in Biomedical Engineering, 33(3):e02799, 2017.</li>
+                        <li><strong>Schiavazzi D.E.</strong>, Hsia T.Y., Marsden A.L., <em>On a sparse pressure-flow rate condensation of rigid circulation models</em>, Journal of Biomechanics, 49(11):2174-2186, 2016.</li>
+                        <li><strong>Schiavazzi D.E.</strong>, Arbia G., Baker C., Hsia T.Y., Marsden A.L., Vignon-Clementel I.E., <em>Uncertainty quantification in virtual surgery hemodynamics predictions for single ventricle palliation</em>, International Journal of Numerical Methods in Biomedical Engineering, 32(3), 2016.</li>
+                        <li><strong>Schiavazzi D.E.</strong>, Kung E., Marsden A.L., Baker C., Pennati G., Hsia T.Y., Hlavacek A.M., Dorfman A.L., <em>Hemodynamic effects of left pulmonary artery stenosis following superior cavopulmonary connection: a patient-specific multiscale modeling study</em>, Journal of Thoracic and Cardiovascular Surgery, 149(3):689-696, 2015.</li>
+                        <li>Banko A.J., Coletti F., <strong>Schiavazzi D.E.</strong>, Elkins C.J., Eaton J.K., <em>Three-dimensional inspiratory flow in the upper and central human airways</em>, Experiments in Fluids, 56(6):117, 2015.</li>
+                        <li><strong>Schiavazzi D.E.</strong>, Doostan A., Iaccarino G., <em>Sparse multiresolution regression for uncertainty propagation</em>, International Journal for Uncertainty Quantification, 4(4):303-331, 2014.</li>
+                        <li><strong>Schiavazzi D.E.</strong>, Coletti F., Iaccarino G., Eaton J.K., <em>A matching pursuit approach to solenoidal filtering of three-dimensional velocity measurements</em>, Journal of Computational Physics, 263:206-221, 2014.</li>
+                        <li>Coletti F., Muramatsu K., <strong>Schiavazzi D.E.</strong>, Elkins C.J., Eaton J.K., <em>Fluid flow and scalar transport through porous fins</em>, Physics of Fluids, 26(5):055104, 2014.</li>
+                    </ol>
+                </div>
+
+                <!-- Book Chapters -->
+                <div x-data="{ open: false }">
+                    <div @click="open = !open" class="accordion-header">
+                        <h3 class="text-lg font-semibold text-gray-400">Book Chapters</h3>
+                        <svg :class="{'rotate-180': open}" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <ol x-show="open" x-cloak class="publication-list mt-4" start="50">
+                        <li>Choi C., Zanoni A., <strong>Schiavazzi D.E.</strong>, Marsden A.L., <em>A primer on uncertainty quantification for cardiovascular simulations</em>, in Model Validation and Uncertainty Quantification in Biomechanics of Soft Tissues edited by Gerhard Holzapfel, Malte Rolf-Pissarczyk, Xiao Yun Xu, 2025.</li>
+                        <li>Schäfer F., Choi C., Zanoni A., Menon K., Geraci G., Marsden A.L., <strong>Schiavazzi D.E.</strong>, <em>An introduction to multi-fidelity uncertainty propagation for applications in biomechanics</em>, in Model Validation and Uncertainty Quantification in Biomechanics of Soft Tissues edited by Gerhard Holzapfel, Malte Rolf-Pissarczyk, Xiao Yun Xu, 2025.</li>
+                    </ol>
+                </div>
+
+                <!-- Conference Proceedings -->
+                <div x-data="{ open: false }">
+                    <div @click="open = !open" class="accordion-header">
+                        <h3 class="text-lg font-semibold text-gray-400">Conference Proceedings</h3>
+                        <svg :class="{'rotate-180': open}" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <ol x-show="open" x-cloak class="publication-list mt-4" start="52">
+                        <li>Partin L., Rushdi, A.A., <strong>Schiavazzi D.E.</strong>, <em>Multifidelity data fusion in convolutional encoder/decoder assembly networks for computational fluid dynamics</em>, Proceedings of the AIAA Scitech 2022 Forum, 3-7 January 2022, San Diego, CA, USA.</li>
+                        <li><strong>Schiavazzi D.E.</strong>, Juliano T.J., <em>Bayesian network inference of thermal protection system failure in hypersonic vehicles</em>, Proceedings of the AIAA Scitech 2020 Forum, 6-10 January 2020, Orlando, FL, USA.</li>
+                        <li><strong>Schiavazzi D.E.</strong>, Fleeter C.M., Geraci G. and Marsden A.L., <em>Multifidelity uncertainty propagation for cardiovascular hemodynamics</em>, Proceedings of the 6th European Conference on Computational Mechanics (ECCM 6) and 7th European Conference on Computational Fluid Dynamics (ECFD 7), 11-15 June 2018, Glasgow, UK.</li>
+                        <li><strong>Schiavazzi D.</strong>, Doostan A. and Iaccarino G., <em>Sparse multiresolution stochastic approximation for uncertainty quantification</em>, Recent Advances in Scientific Computing and Applications, 586 pp. 295-303, AMS 2013.</li>
+                    </ol>
+                </div>
+
+                <!-- Technical Reports -->
+                <div x-data="{ open: false }">
+                    <div @click="open = !open" class="accordion-header">
+                        <h3 class="text-lg font-semibold text-gray-400">Technical Reports</h3>
+                        <svg :class="{'rotate-180': open}" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <ol x-show="open" x-cloak class="publication-list mt-4" start="56">
+                        <li>Partin L., Geraci G., Rushdi A.A., Eldred M.S., <strong>Schiavazzi D.</strong>, <em>Multifidelity Data Fusion in Convolutional Encoder/Decoder Assembly Networks for Computational Fluid Dynamics Applications</em>, in Center for Computing Research Summer Proceedings 2021, J.D. Smith and E. Galvan, eds., Technical Report SAND2021-15925R, Sandia National Laboratories, pp. 102-119, 2021.</li>
+                        <li>Fleeter C.M., Geraci G., <strong>Schiavazzi D.</strong>, Kahn A.M., Eldred M.S., Marsden A.L., <em>Multifidelity multilevel approaches for cardiovascular flow under uncertainty</em>, in Center for Computing Research Summer Proceedings 2017, A.D. Baczewski and M.L. Parks, eds., Technical Report SAND2018-2780O, Sandia National Laboratories, pp. 27-50, 2018.</li>
+                        <li>Tachikawa H., <strong>Schiavazzi D.</strong>, Arima T., Iaccarino G., <em>Robust optimization for windmill airfoil design under variable wind conditions</em>, Honda R&D Technical Review, 26(1):160-165, 2014.</li>
+                        <li>Tachikawa H., <strong>Schiavazzi D.</strong>, Arima T., Iaccarino G., <em>Robust optimization for windmill airfoil design under variable wind conditions</em>, Proceedings of the 2012 CTR Summer Program, Stanford University.</li>
+                        <li>Lucor D., Witteveen J., Constantine P., <strong>Schiavazzi D.</strong>, Iaccarino G., <em>Comparison of adaptive uncertainty quantification approaches for shock wave-dominated flows</em>, Proceedings of the 2012 CTR Summer Program, Stanford University.</li>
+                        <li><strong>Schiavazzi D.</strong>, Doostan A., Iaccarino G., <em>A Sparse Multiresolution Stochastic approximation for uncertainty quantification</em>, CTR Research Briefs 2012, Stanford University.</li>
+                        <li><strong>Schiavazzi D.</strong>, Coletti F., Iaccarino G., Eaton J.K., <em>A matching pursuit approach to solenoidal filtering of three-dimensional velocity measurements</em>, CTR Research Briefs 2012, Stanford University.</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching" class="mb-16 scroll-mt-24">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-6">Teaching</h2>
+
+            <div class="grid md:grid-cols-1 gap-6">
+                <div class="card">
+                    <h4 class="font-bold text-lg text-blue-700">ACMS 40760 - Introduction to Stochastic Modeling</h4>
+                    <p class="text-gray-600">Instructor, University of Notre Dame</p>
+                    <p class="text-sm text-gray-500 mt-2">Fall 2016, Spring 2018, Fall 2018, Spring 2019, Fall 2019, Fall 2020, Spring 2021, Fall 2021, Spring 2022, Fall 2022, Spring 2023, Fall 2023, Fall 2024</p>
+                    <div class="mt-2 space-y-1">
+                        <p><a href="https://curate.nd.edu/articles/report/Explorations_in_Stochastic_Modeling_-_Fall_2024/28102763?file=51394826" class="text-blue-600 hover:underline" target="_blank">Project Collection: Explorations in Stochastic Modeling - Fall 2024</a></p>
+                        <p><a href="https://curate.nd.edu/articles/educational_resource/Explorations_in_Stochastic_Modeling_-_Fall_2023/26799007?file=48701335" class="text-blue-600 hover:underline" target="_blank">Project Collection: Explorations in Stochastic Modeling - Fall 2023</a></p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4 class="font-bold text-lg text-blue-700">ACMS 60792 - Cardiovascular Modeling and Uncertainty Quantification</h4>
+                    <p class="text-gray-600">Instructor, University of Notre Dame</p>
+                    <p class="text-sm text-gray-500 mt-2">Spring 2025</p>
+                    <p class="mt-2"><a href="https://curate.nd.edu/articles/report/Explorations_in_Cardiovascular_Modeling_and_Uncertainty_Quantification_-_Spring_2025/29436365?file=55771304" class="text-blue-600 hover:underline" target="_blank">Project Collection: Explorations in Cardiovascular Modeling and Uncertainty Quantification - Spring 2025</a></p>
+                </div>
+
+                <div class="card">
+                    <h4 class="font-bold text-lg text-blue-700">STRAND Undergraduate Research - Cardiovascular Modeling</h4>
+                    <p class="text-gray-600">Supervised a team of five undergraduate students through weekly meetings, focusing on the creation of cardiovascular models, application of physiological boundary conditions, numerical solution and post-processing with VTK scripting.</p>
+                    <p class="text-sm text-gray-500 mt-2">Fall 2024, Spring 2025, Fall 2025, Spring 2026, Fall 2026</p>
+                </div>
+
+            </div>
+
+            <!-- More Teaching - Expandable -->
+            <div x-data="{ open: false }" class="mt-6">
+                <div @click="open = !open" class="accordion-header">
+                    <h3 class="text-lg font-semibold text-gray-400">More Teaching</h3>
+                    <svg :class="{'rotate-180': open}" class="w-6 h-6 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div x-show="open" x-cloak x-transition class="mt-6 grid md:grid-cols-1 gap-6">
+
+                    <div class="card">
+                        <h4 class="font-bold text-lg text-blue-700">ACMS 40390 - Numerical Analysis</h4>
+                        <p class="text-gray-600">Instructor, University of Notre Dame</p>
+                        <p class="text-sm text-gray-500 mt-2">Spring 2022</p>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="font-bold text-lg text-blue-700">ACMS 70860 - Stochastic Analysis</h4>
+                        <p class="text-gray-600">Instructor, University of Notre Dame</p>
+                        <p class="text-sm text-gray-500 mt-2">Spring 2017, Spring 2019</p>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="font-bold text-lg text-blue-700">ACMS 40730 - Mathematical/Computational Modeling</h4>
+                        <p class="text-gray-600">Instructor, University of Notre Dame</p>
+                        <p class="text-sm text-gray-500 mt-2">Fall 2017, Fall 2024</p>
+                        <p class="mt-2"><a href="https://curate.nd.edu/articles/report/Explorations_in_Mathematical_and_Computational_Modeling_-_Fall_2024/28102769?file=51394844" class="text-blue-600 hover:underline" target="_blank">Project Collection: Explorations in Mathematical and Computational Modeling - Fall 2024</a></p>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="font-bold text-lg text-blue-700">ACMS 80770 - Topics in Applied Mathematics</h4>
+                        <p class="text-gray-600">UQ for Computational Science and Engineering: Monte Carlo and spectral stochastic methods. Instructor, University of Notre Dame</p>
+                        <p class="text-sm text-gray-500 mt-2">Fall 2017</p>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="font-bold text-lg text-blue-700">ME 469 - Computational Methods in Fluid Mechanics</h4>
+                        <p class="text-gray-600">Teaching Assistant, Stanford University</p>
+                        <p class="text-sm text-gray-500 mt-2">Fall 2012-2013</p>
+                    </div>
+
+                    <div class="card">
+                        <h4 class="font-bold text-lg text-blue-700">MAE 290B - Numerical Methods for Differential Equations</h4>
+                        <p class="text-gray-600">Guest Lecturer, University of California, San Diego</p>
+                        <p class="text-sm text-gray-500 mt-2">Winter 2013-2014</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-4 text-center">
+            <p>&copy; 2025 Daniele E. Schiavazzi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scrollspy for navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            if (!sections.length || !navLinks.length) return;
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href').substring(1) === entry.target.id) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, { rootMargin: "-50% 0px -50% 0px" });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>

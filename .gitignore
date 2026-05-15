@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# LaTeX auxiliary files (if compiling locally)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Backup files
+*.bak
+*.backup
